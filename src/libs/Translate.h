@@ -6,7 +6,7 @@
 
 class Translate{
 
-    private:
+    public:
 
     struct Node{
         char val;
@@ -35,6 +35,6 @@ class Translate{
     Node* construct(std::string posfixo);
     void clean();
 
-}
+};
 
 #endif

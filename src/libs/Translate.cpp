@@ -1,5 +1,4 @@
-#include "translate.h"
-
+#include "Translate.h"
 #include <stack>
 #include <iostream>
 
@@ -10,7 +9,7 @@ Translate::Node* construct(std::string posfixo){
         return nullptr;
     }
 
-    for (char i : postfix){
+    for (char i : posfixo){
         if (!isSymbol(i)){
             Node* n = new Node(i);
             pilha.push(n);
@@ -23,7 +22,7 @@ Translate::Node* construct(std::string posfixo){
 
             Node* n = new Node(i, y, x);
 
-            s.push(n);
+            pilha.push(n);
         }
     }
 
