@@ -3,6 +3,7 @@
 
 #include <stack>
 #include <iostream> 
+#include <fstream>
 
 
 struct Node{
@@ -37,8 +38,10 @@ class Translate{
     };
 
     bool isSymbol(char c);
-    void read_pos(std::string posfixo);
+    Node* read_pos(std::string posfixo);
     void clean();
+    void infix(Node* n, std::ofstream& out);
+    void prefix(Node* n, std::ofstream& out);
 
 };
 
