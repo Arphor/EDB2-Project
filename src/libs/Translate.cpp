@@ -3,11 +3,9 @@
 #include <iostream>
 
 
-Node* Translate::construct(std::string posfixo){
+void Translate::read_pos(std::string posfixo){
     
-    if (posfixo.length() == 0){
-        return nullptr;
-    }
+    if (posfixo.length() != 0){
 
     for (char i : posfixo){
         if (!Translate::isSymbol(i)){
@@ -28,6 +26,7 @@ Node* Translate::construct(std::string posfixo){
 
     top = pilha.top();
 
+    }
 }
 
 bool Translate::isSymbol(char c){

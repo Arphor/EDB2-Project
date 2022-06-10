@@ -37,7 +37,7 @@ class Translate{
     };
 
     bool isSymbol(char c);
-    Node* construct(std::string posfixo);
+    void read_pos(std::string posfixo);
     void clean();
 
 };
