@@ -4,11 +4,8 @@
 #include <stack>
 #include <iostream> 
 
-class Translate{
 
-    public:
-
-    struct Node{
+struct Node{
         char val;
         Node *left, *right;
 
@@ -26,10 +23,18 @@ class Translate{
 
     };
 
+class Translate{
+
+    private:
+
     std::stack<Node*> pilha;
-    Node* top = nullptr;
+    Node* top;
 
     public:
+    Translate(){
+        top = nullptr;
+
+    };
 
     bool isSymbol(char c);
     Node* construct(std::string posfixo);

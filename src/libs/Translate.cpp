@@ -3,16 +3,16 @@
 #include <iostream>
 
 
-Translate::Node* construct(std::string posfixo){
+Node* Translate::construct(std::string posfixo){
     
     if (posfixo.length() == 0){
         return nullptr;
     }
 
     for (char i : posfixo){
-        if (!isSymbol(i)){
+        if (!Translate::isSymbol(i)){
             Node* n = new Node(i);
-            pilha.push(n);
+            Translate::pilha.push(n);
         }else{
             Node* x = pilha.top();
             pilha.pop();
@@ -44,4 +44,9 @@ void Translate::clean(){
     }
 
     top = nullptr;
+}
+
+int main(){
+
+    return 0;
 }
