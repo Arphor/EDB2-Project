@@ -2,6 +2,9 @@
 #include <stack>
 #include <iostream>
 #include <fstream>
+#include <string>
+
+using namespace std;
 
 
 Node* Translate::read_pos(std::string posfixo){
@@ -86,7 +89,7 @@ void Translate::prefix(Node* n, std::ofstream& out){
 
 
 
-int main(){
+/*int main(){
 
     std::ofstream myfile;
     myfile.open ("pre.out", std::ios::out);
@@ -94,18 +97,32 @@ int main(){
     std::ofstream myfile2;
     myfile2.open ("in.out", std::ios::out);
 
-    std::string s = "AB*CD*+";
-    Translate t;
+    std::string arquivo;
+    std::string linha;
+    
+    std::cin >> arquivo;
+
+    std::ifstream file;
+    file.open(arquivo);
 
     Node* i; 
-    i = t.read_pos(s);
-    std::cout << i->val << std::endl;
-
-    t.infix(i, myfile2);
-    t.prefix(i, myfile);
+    Translate t;
+    if(file.is_open()){
+        while (getline(file,linha))
+        {
+            std::cout << linha << std::endl;
+            i = t.read_pos(linha);
+            t.infix(i, myfile2);
+            myfile2 << endl;
+            t.prefix(i, myfile);
+            myfile << endl;
+            
+        }
+        
+    }
     
     myfile.close();
     myfile2.close();
 
     return 0;
-}
+}*/

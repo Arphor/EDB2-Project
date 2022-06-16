@@ -23,17 +23,23 @@ int main( int argc, char ** argv )
     std::ofstream myfilein;
     myfilein.open ("in.out", std::ios::out);
 
+    std::string s = "AB+CD+*";
     Node* no;
 
     if(myfile.is_open()){
-        cin.get();
+        //cin.get();
         while (getline(myfile, linha))
         {
-            cout << linha << endl;
-            //no = tradutor.read_pos(linha);
-            //tradutor.infix(no, myfilein);
-            //tradutor.prefix(no, myfilepre);
+            std::cout << linha << std::endl;
+            no = tradutor.read_pos(linha);
+            tradutor.infix(no, myfilein);
+            myfilein << endl;
+            tradutor.prefix(no, myfilepre);
+            myfilepre << endl;
+            
         }
+        myfilein.close();
+        myfilepre.close();
         
     }
     return 0;
