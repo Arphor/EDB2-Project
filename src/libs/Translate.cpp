@@ -6,6 +6,7 @@
 
 Node* Translate::read_pos(std::string posfixo){
     
+    this->clean();
     if (posfixo.length() == 0){
         return nullptr;
     }
@@ -56,7 +57,6 @@ void Translate::infix(Node* n, std::ofstream& out){
     }
 
     if (isSymbol(n->val)){
-        std::cout << "oi" << std::endl;
         out << "(";
     }
 
@@ -69,7 +69,9 @@ void Translate::infix(Node* n, std::ofstream& out){
         out << ")";
     }
 
+
 }
+
 
 void Translate::prefix(Node* n, std::ofstream& out){
 
@@ -82,30 +84,5 @@ void Translate::prefix(Node* n, std::ofstream& out){
     prefix(n->left, out);
     prefix(n->right, out);
 
-}
 
-
-
-int main(){
-
-    std::ofstream myfile;
-    myfile.open ("pre.out", std::ios::out);
-
-    std::ofstream myfile2;
-    myfile2.open ("in.out", std::ios::out);
-
-    std::string s = "AB*CD*+";
-    Translate t;
-
-    Node* i; 
-    i = t.read_pos(s);
-    std::cout << i->val << std::endl;
-
-    t.infix(i, myfile2);
-    t.prefix(i, myfile);
-    
-    myfile.close();
-    myfile2.close();
-
-    return 0;
 }

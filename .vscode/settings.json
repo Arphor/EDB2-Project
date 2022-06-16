@@ -1,5 +1,9 @@
 {
     "files.associations": {
+<<<<<<< Updated upstream
+=======
+        "iosfwd": "cpp",
+>>>>>>> Stashed changes
         "atomic": "cpp",
         "bit": "cpp",
         "cctype": "cpp",
@@ -16,9 +20,15 @@
         "cwchar": "cpp",
         "deque": "cpp",
         "exception": "cpp",
+<<<<<<< Updated upstream
         "initializer_list": "cpp",
         "ios": "cpp",
         "iosfwd": "cpp",
+=======
+        "fstream": "cpp",
+        "initializer_list": "cpp",
+        "ios": "cpp",
+>>>>>>> Stashed changes
         "iostream": "cpp",
         "istream": "cpp",
         "iterator": "cpp",
@@ -29,11 +39,19 @@
         "stack": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
+<<<<<<< Updated upstream
+=======
+        "string": "cpp",
+>>>>>>> Stashed changes
         "system_error": "cpp",
         "tuple": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp",
         "utility": "cpp",
+<<<<<<< Updated upstream
+=======
+        "vector": "cpp",
+>>>>>>> Stashed changes
         "xfacet": "cpp",
         "xiosbase": "cpp",
         "xlocale": "cpp",
@@ -43,7 +61,11 @@
         "xstddef": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
+<<<<<<< Updated upstream
         "xutility": "cpp",
         "fstream": "cpp"
+=======
+        "xutility": "cpp"
+>>>>>>> Stashed changes
     }
 }
