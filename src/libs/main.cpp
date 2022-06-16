@@ -2,11 +2,10 @@
 
 #include "Translate.h"
 
+using namespace std;
+
 int main( int argc, char ** argv )
 {
-<<<<<<< Updated upstream
-
-=======
 
     Translate tradutor;
     string arquivo;
@@ -38,6 +37,5 @@ int main( int argc, char ** argv )
         }
         
     }
->>>>>>> Stashed changes
     return 0;
 }

@@ -2,6 +2,10 @@
 #include <stack>
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <sstream>
+#include <string>
+#include <sstream>
 
 
 Node* Translate::read_pos(std::string posfixo){
@@ -11,9 +15,26 @@ Node* Translate::read_pos(std::string posfixo){
         return nullptr;
     }
 
-    for (char i : posfixo){
-        if (!Translate::isSymbol(i)){
-            Node* n = new Node(i);
+
+
+    //string line = "test one two three.";
+    std::vector<std::string> v;
+    std::stringstream ss(posfixo);
+    std::string s;
+
+    while (std::getline(ss, s, ' ')) {
+        v.push_back(s);
+    }
+
+
+    std::string d;
+
+    while(!v.empty()){
+        d = v.front();
+        v.erase(v.begin());
+
+        if (!Translate::isSymbol(d)){
+            Node* n = new Node(d);
             Translate::pilha.push(n);
         }else{
             Node* x = pilha.top();
@@ -22,7 +43,7 @@ Node* Translate::read_pos(std::string posfixo){
             Node* y = pilha.top();
             pilha.pop();
 
-            Node* n = new Node(i, y, x);
+            Node* n = new Node(d, y, x);
 
             pilha.push(n);
         }
@@ -33,8 +54,8 @@ Node* Translate::read_pos(std::string posfixo){
     
 }
 
-bool Translate::isSymbol(char c){
-    if (c == '+' || c == '*' || c == '/' || c == '-'){
+bool Translate::isSymbol(std::string c){
+    if (!c.compare("+") || !c.compare("*") || !c.compare("/") || !c.compare("-")){
         return true;
     }
     return false;

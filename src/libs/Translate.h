@@ -7,16 +7,16 @@
 
 
 struct Node{
-        char val;
+        std::string val;
         Node *left, *right;
 
-        Node(char val){
+        Node(std::string val){
             this->val = val;
             this->left = nullptr;
             this->right = nullptr;
         };
 
-        Node(char val, Node *left, Node *right){
+        Node(std::string val, Node *left, Node *right){
             this->val = val;
             this->left = left;
             this->right = right;
@@ -37,7 +37,7 @@ class Translate{
 
     };
 
-    bool isSymbol(char c);
+    bool isSymbol(std::string c);
     Node* read_pos(std::string posfixo);
     void clean();
     void infix(Node* n, std::ofstream& out);
