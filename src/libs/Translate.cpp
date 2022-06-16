@@ -100,7 +100,7 @@ void Translate::prefix(Node* n, std::ofstream& out){
         return;
     }
 
-    out << n->val;
+    out << n->val << " ";
 
     prefix(n->left, out);
     prefix(n->right, out);
