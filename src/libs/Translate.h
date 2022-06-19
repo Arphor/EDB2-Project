@@ -42,6 +42,7 @@ class Translate{
     void clean();
     void infix(Node* n, std::ofstream& out);
     void prefix(Node* n, std::ofstream& out);
+    int val(Node* n);
 
 };
 

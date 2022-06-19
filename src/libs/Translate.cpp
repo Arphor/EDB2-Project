@@ -107,3 +107,26 @@ void Translate::prefix(Node* n, std::ofstream& out){
 
 
 }
+
+int Translate::val(Node *n){
+
+    if(isSymbol(n->val)) {
+        if(!n->val.compare("+")){
+            return val(n->left) + val(n->right);
+        }
+        if(!n->val.compare("-")){
+            return val(n->left) - val(n->right);
+        }
+        if(!n->val.compare("/")){
+            return val(n->left) / val(n->right);
+        }
+        if(!n->val.compare("*")){
+            return val(n->left) * val(n->right);
+        }   
+    }else{
+        int number = 0;
+        number = std::stoi(n->val);
+        return number;
+    }
+
+}
