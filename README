@@ -1,0 +1,13 @@
+#Executar
+Pelo terminal acesse a pasta do programa e dentro da pasta src\libs
+```
+g++ main.cpp Translate.cpp -o a 
+```
+criando assim o exécutavel do programa, agora pelo terminal execute:
+```
+a.exe 
+```
+para iniciar o programa, e passar o nome do arquivo de leitura, nesse exemplo o 
+```
+pos.in
+```
