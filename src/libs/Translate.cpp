@@ -128,5 +128,6 @@ int Translate::val(Node *n){
         number = std::stoi(n->val);
         return number;
     }
+    return 0;
 
 }

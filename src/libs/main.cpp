@@ -32,8 +32,8 @@ int main( int argc, char ** argv )
         cin.get();
         while (getline(myfile, linha))
         {
-            std::cout << "oi" << std::endl;
-            cout << linha << endl;
+            //std::cout << "oi" << std::endl;
+            //cout << linha << endl;
             no = tradutor.read_pos(linha);
 
             tradutor.infix(no, myfilein);
