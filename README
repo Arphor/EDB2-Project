@@ -1,3 +1,7 @@
+# Apresentação
+
+Nesse trabalho você terá a oportunidade de implementar um programa que gera uma árvore binária apartir de uma equação posfixa e retorna suas versões prefixa, infixa e seu resultado.
+
 #Executar
 Pelo terminal acesse a pasta do programa e dentro da pasta src\libs
 ```
