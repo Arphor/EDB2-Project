@@ -2,12 +2,18 @@
 
 Nesse trabalho você terá a oportunidade de implementar um programa que gera uma árvore binária apartir de uma equação posfixa e retorna suas versões prefixa, infixa e seu resultado.
 
-#Executar
-Pelo terminal acesse a pasta do programa e dentro da pasta src\libs
+
+## Compilando
+
+```
+Pelo terminal acesse a pasta do programa e dentro da pasta src
+
 ```
 g++ main.cpp Translate.cpp -o a 
 ```
+
 criando assim o exécutavel do programa, agora pelo terminal execute:
+
 ```
 a.exe 
 ```
